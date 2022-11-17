@@ -19,7 +19,7 @@ void tchar(va_list list)
  */
 void tint(va_list list)
 {
-	printf("%i", va_arg(list, int)
+	printf("%i", va_arg(list, int));
 }
 /**
  * tfloat - prints variadic argument float
