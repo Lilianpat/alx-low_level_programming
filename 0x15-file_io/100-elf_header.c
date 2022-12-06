@@ -13,6 +13,7 @@
  *
  * Return: No Return
  */
+
 void _checkelf(char *h)
 {
 	if (h[0] != 0x7f || h[1] != 'E' || h[2] != 'L' || h[3] != 'F')
