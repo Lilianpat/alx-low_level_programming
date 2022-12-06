@@ -8,7 +8,13 @@
 
 /**
  * _checkelf - checks if file is elf type
+<<<<<<< HEAD
  * @h: header
+=======
+ *
+ * @h: header
+ *
+>>>>>>> 14dbffd1cbb15776ceab4bafded06ca2de15acb2
  * Return: No Return
  */
 void _checkelf(char *h)
@@ -19,7 +25,13 @@ void _checkelf(char *h)
 
 /**
  * _magic - print elf magic
+<<<<<<< HEAD
  * @h: header
+=======
+ *
+ * @h: header
+ *
+>>>>>>> 14dbffd1cbb15776ceab4bafded06ca2de15acb2
  * Return: No Return
  */
 void _magic(char *h)
@@ -36,8 +48,15 @@ void _magic(char *h)
 }
 /**
  * _class - print elf class
+<<<<<<< HEAD
  * @h: header
  * @x64: 1 if x64, 0 if x32
+=======
+ *
+ * @h: header
+ * @x64: 1 if x64, 0 if x32
+ *
+>>>>>>> 14dbffd1cbb15776ceab4bafded06ca2de15acb2
  * Return: No Return
  */
 void _class(char *h, int x64)
@@ -55,7 +74,13 @@ void _class(char *h, int x64)
 }
 /**
  * _data - print elf data
+<<<<<<< HEAD
  * @h: header
+=======
+ *
+ * @h: header
+ *
+>>>>>>> 14dbffd1cbb15776ceab4bafded06ca2de15acb2
  * Return: No Return
  */
 void _data(char *h)
@@ -71,7 +96,13 @@ void _data(char *h)
 }
 /**
  * _version - print elf version
+<<<<<<< HEAD
  * @h: header
+=======
+ *
+ * @h: header
+ *
+>>>>>>> 14dbffd1cbb15776ceab4bafded06ca2de15acb2
  * Return: No Return
  */
 void _version(char *h)
@@ -88,7 +119,13 @@ void _version(char *h)
 }
 /**
  * _os - print elf os/ABI
+<<<<<<< HEAD
  * @h: header
+=======
+ *
+ * @h: header
+ *
+>>>>>>> 14dbffd1cbb15776ceab4bafded06ca2de15acb2
  * Return: No Return
  */
 void _os(char *h)
@@ -134,7 +171,13 @@ void _os(char *h)
 }
 /**
  * _abiv - checks abi version
+<<<<<<< HEAD
  * @h: header
+=======
+ *
+ * @h: header
+ *
+>>>>>>> 14dbffd1cbb15776ceab4bafded06ca2de15acb2
  * Return: No Return
  */
 void _abiv(char *h)
@@ -144,8 +187,15 @@ void _abiv(char *h)
 }
 /**
  * _type - print elf type
+<<<<<<< HEAD
  * @h: header
  * @x64: variable to check if x64 (1) or x32 (0)
+=======
+ *
+ * @h: header
+ * @x64: variable to check if x64 (1) or x32 (0)
+ *
+>>>>>>> 14dbffd1cbb15776ceab4bafded06ca2de15acb2
  * Return: No Return
  */
 void _type(char *h, int x64)
@@ -161,6 +211,7 @@ void _type(char *h, int x64)
 
 	switch (h[xtype])
 	{
+<<<<<<< HEAD
 		case 0:
 			printf("NONE\n");
 			break;
@@ -178,13 +229,39 @@ void _type(char *h, int x64)
 			break;
 		default:
 			printf("<unknown>: %02x\n", h[xtype]);
+=======
+	case 0:
+		printf("NONE\n");
+		break;
+	case 1:
+		printf("REL (Relocatable file)\n");
+		break;
+	case 2:
+		printf("EXEC (Executable file)\n");
+		break;
+	case 3:
+		printf("DYN (Shared object file)\n");
+		break;
+	case 4:
+		printf("CORE (Core file)\n");
+		break;
+	default:
+		printf("<unknown>: %02x\n", h[xtype]);
+>>>>>>> 14dbffd1cbb15776ceab4bafded06ca2de15acb2
 	}
 }
 /**
  * _entry - print elf entry point access by directly accesing
  * the elf header struct
+<<<<<<< HEAD
  * @h: header
  * @x64: check 1 for x64 and 0 x32
+=======
+ *
+ * @h: header
+ * @x64: check 1 for x64 and 0 x32
+ *
+>>>>>>> 14dbffd1cbb15776ceab4bafded06ca2de15acb2
  * Return: No Return
  */
 void _entry(char *h, int x64)
@@ -233,6 +310,10 @@ void _entry(char *h, int x64)
 /**
  * main - displays the information contained in the ELF header at
  * the start of an ELF file.
+<<<<<<< HEAD
+=======
+ *
+>>>>>>> 14dbffd1cbb15776ceab4bafded06ca2de15acb2
  * Usage: elf_header elf_filename
  * displayed information: (not less, not more)
  * Magic
@@ -243,11 +324,22 @@ void _entry(char *h, int x64)
  * ABI Version
  * Type
  * Entry point address
+<<<<<<< HEAD
  * @argc: Counts the number of parameters that go into main
  * @argv: Pointer of array of pointers containing strings entering main
  * Return: Always 0 on (Success)
  * if the file is not an ELF file, or on error, exit with status code 98
  * and display a comprehensive error message to stderr
+=======
+ *
+ * @argc: Counts the number of parameters that go into main
+ * @argv: Pointer of array of pointers containing strings entering main
+ *
+ * Return: Always 0 on (Success)
+ *
+ * if the file is not an ELF file, or on error, exit with status code 98
+ *  and display a comprehensive error message to stderr
+>>>>>>> 14dbffd1cbb15776ceab4bafded06ca2de15acb2
  */
 int main(int argc, char **argv)
 {

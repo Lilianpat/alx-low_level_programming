@@ -25,7 +25,7 @@
  * Can't close fd FD_VALUE, followed by a new line,
  * on the POSIX standard error
  */
-    int main(int argc, char **argv)
+int main(int argc, char **argv)
 {
 	int fdfrom, fdto, checkr, checkw, checkc1, checkc2;
 	char buff[1024];
@@ -43,6 +43,7 @@
 	fdto = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (fdto == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
+
 
 	while ((checkr = read(fdfrom, buff, 1024)) > 0)
 	{
